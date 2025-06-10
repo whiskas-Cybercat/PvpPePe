@@ -13,15 +13,16 @@ import TestBattleScene from './scenes/TestBattleScene.js';
 
 const config = {
   type: Phaser.AUTO,
-  width: 591,
-  height: 1280,
+  width: window.innerWidth,
+  height: window.innerHeight,
   parent: 'game-container',
+  backgroundColor: '#000000',
   scale: {
-    mode: Phaser.Scale.FIT,
-    autoCenter: Phaser.Scale.CENTER_BOTH
+    mode: Phaser.Scale.RESIZE,           
+    autoCenter: Phaser.Scale.CENTER_BOTH,   
   },
-  scene: [
-    UIScene,           // ⚠️ запускается первой (но не активируется сразу)
+    scene: [
+    UIScene,          
     MenuScene,
     LuckyScene,
     BattlePassScene,
